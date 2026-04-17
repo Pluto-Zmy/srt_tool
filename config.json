@@ -1,0 +1,53 @@
+{
+    "base_fps": 60,
+    "srt_list": [
+        {
+            "file_name": "1.srt",
+            "time_code": "00:00:00:00"
+        },
+        {
+            "file_name": "2.srt",
+            "time_code": "00:04:01:50"
+        },
+        {
+            "file_name": "3.srt",
+            "time_code": "00:06:58:11"
+        },
+        {
+            "file_name": "4.srt",
+            "time_code": "00:09:49:05"
+        },
+        {
+            "file_name": "5.srt",
+            "time_code": "00:13:45:42"
+        },
+        {
+            "file_name": "6.srt",
+            "time_code": "00:17:16:58"
+        },
+        {
+            "file_name": "7.srt",
+            "time_code": "00:20:10:22"
+        },
+        {
+            "file_name": "8.srt",
+            "time_code": "00:23:52:16"
+        },
+        {
+            "file_name": "9.srt",
+            "time_code": "00:28:42:35"
+        },
+        {
+            "file_name": "10.srt",
+            "time_code": "00:33:40:05"
+        },
+        {
+            "file_name": "11.srt",
+            "time_code": "00:37:35:37"
+        },
+        {
+            "file_name": "12.srt",
+            "time_code": "00:41:15:19"
+        }
+    ]
+}
