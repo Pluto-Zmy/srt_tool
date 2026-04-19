@@ -6,6 +6,7 @@ from utils.srt_offset import set_srt_offset
 from utils.srt_concat import srt_concat
 from utils.convert_encode import convert_gb18030_to_utf8
 from utils.timecvt import timecvt
+from utils.fix_srt_overlap import fix_srt_overlap
 
 
 def srt_tool(data):
@@ -39,6 +40,7 @@ def srt_tool(data):
         output_srt_path.append(final_srt_path)
 
     srt_concat(output_srt_path)
+    fix_srt_overlap('output.srt')
 
 
 
