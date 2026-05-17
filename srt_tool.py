@@ -10,6 +10,9 @@ from pathlib import Path
 TIMESTAMP_RE = re.compile(r"^(\d{2}):(\d{2}):(\d{2})[,.](\d{3})$")
 TIME_RANGE_RE = re.compile(r"(.+?)\s*-->\s*(.+)")
 TRANSLATION_NOTICE_RE = re.compile(r"^以下歌词翻译由.*提供$")
+ROLE_MARKER_RE = re.compile(r"^\s*([^\s:：]{1,12})[:：]\s*(.*)$")
+TRANSLATION_OVERLAP_THRESHOLD = 0.75
+TRANSLATION_START_TOLERANCE_MS = 1000
 
 
 @dataclass
@@ -61,6 +64,23 @@ def format_timestamp(milliseconds: int) -> str:
     return f"{hours:02}:{minutes:02}:{seconds:02},{millis:03}"
 
 
+def clean_lyric_line(line: str) -> str | None:
+    stripped = line.strip()
+    match = ROLE_MARKER_RE.match(stripped)
+    if match:
+        stripped = match.group(2).strip()
+    return stripped or None
+
+
+def clean_lyric_lines(lines: list[str]) -> list[str]:
+    cleaned: list[str] = []
+    for line in lines:
+        cleaned_line = clean_lyric_line(line)
+        if cleaned_line is not None:
+            cleaned.append(cleaned_line)
+    return cleaned
+
+
 def parse_srt(path: Path) -> list[SubtitleCue]:
     content = read_text(path)
     blocks = re.split(r"(?:\r?\n){2,}", content.strip())
@@ -90,53 +110,66 @@ def parse_srt(path: Path) -> list[SubtitleCue]:
 def write_srt(cues: list[SubtitleCue], output_path: Path) -> None:
     output_lines: list[str] = []
 
-    for index, cue in enumerate(cues, start=1):
-        output_lines.append(f"{index}\n")
+    output_index = 1
+    for cue in cues:
+        lines = clean_lyric_lines(cue.lines)
+        if not lines:
+            continue
+
+        output_lines.append(f"{output_index}\n")
         output_lines.append(f"{format_timestamp(cue.start_ms)} --> {format_timestamp(cue.end_ms)}\n")
-        output_lines.extend(f"{line}\n" for line in cue.lines)
+        output_lines.extend(f"{line}\n" for line in lines)
         output_lines.append("\n")
+        output_index += 1
 
     output_path.write_text("".join(output_lines), encoding="utf-8")
 
 
-def minute_second_key(milliseconds: int) -> tuple[int, int]:
-    total_seconds = milliseconds // 1000
-    return total_seconds // 60, total_seconds % 60
-
-
 def is_translation_line(line: str) -> bool:
-    stripped = line.strip()
-    if not stripped:
+    cleaned_line = clean_lyric_line(line)
+    if cleaned_line is None:
         return False
-    return not TRANSLATION_NOTICE_RE.match(stripped)
+    return not TRANSLATION_NOTICE_RE.match(cleaned_line)
 
 
-def build_translation_map(cues: list[SubtitleCue]) -> dict[tuple[int, int], list[str]]:
-    translations: dict[tuple[int, int], list[str]] = {}
+def get_translation_lines(cue: SubtitleCue) -> list[str]:
+    return [cleaned for line in cue.lines if is_translation_line(line) for cleaned in [clean_lyric_line(line)] if cleaned]
 
-    for cue in cues:
-        lines = [line.strip() for line in cue.lines if is_translation_line(line)]
-        if not lines:
+
+def overlap_ratio(base: SubtitleCue, candidate: SubtitleCue) -> float:
+    base_duration = base.end_ms - base.start_ms
+    if base_duration <= 0:
+        return 0.0
+
+    overlap = min(base.end_ms, candidate.end_ms) - max(base.start_ms, candidate.start_ms)
+    if overlap <= 0:
+        return 0.0
+
+    return overlap / base_duration
+
+
+def find_translation_lines(original: SubtitleCue, translation_cues: list[SubtitleCue]) -> list[str]:
+    result: list[str] = []
+
+    for translation in translation_cues:
+        if abs(original.start_ms - translation.start_ms) > TRANSLATION_START_TOLERANCE_MS:
+            continue
+        if overlap_ratio(original, translation) < TRANSLATION_OVERLAP_THRESHOLD:
             continue
 
-        key = minute_second_key(cue.start_ms)
-        if key not in translations:
-            translations[key] = []
+        for line in get_translation_lines(translation):
+            if line not in result:
+                result.append(line)
 
-        for line in lines:
-            if line not in translations[key]:
-                translations[key].append(line)
-
-    return translations
+    return result
 
 
 def merge_translation(original_cues: list[SubtitleCue], translation_cues: list[SubtitleCue]) -> list[SubtitleCue]:
-    translations = build_translation_map(translation_cues)
     merged: list[SubtitleCue] = []
 
     for cue in original_cues:
         lines = list(cue.lines)
-        translation_lines = translations.get(minute_second_key(cue.start_ms), [])
+        translation_lines = find_translation_lines(cue, translation_cues)
         lines.extend(translation_lines)
         merged.append(SubtitleCue(start_ms=cue.start_ms, end_ms=cue.end_ms, lines=lines))
 
