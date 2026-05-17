@@ -79,6 +79,24 @@ python generate_config_v2.py --raw raw.txt --output configV2.json
 处理后的文件：
 - `output.srt`：翻译归并、偏移、拼接、重叠清洗后的最终字幕
 
+### output.srt 拆分
+
+将 `output.srt` 中每个字幕块的第一行和第二行分别输出为独立 SRT 文件：
+
+```
+python split_output_srt.py
+```
+
+默认输出：
+- `output_line1.srt`：每个字幕块的第一行
+- `output_line2.srt`：每个字幕块的第二行（没有第二行的字幕块会跳过）
+
+自定义路径：
+
+```
+python split_output_srt.py --input output.srt --line1-output output_line1.srt --line2-output output_line2.srt
+```
+
 ## 依赖
 
 - Python 3.x
