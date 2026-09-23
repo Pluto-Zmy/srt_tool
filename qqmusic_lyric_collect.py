@@ -27,6 +27,7 @@ class LyricFile:
     title: str
     normalized_artist: str
     normalized_title: str
+    has_content: bool = True
 
 
 def normalize(value: str | None) -> str:
@@ -87,7 +88,8 @@ def parse_track_line(line: str) -> Track | None:
     title = stem
 
     dash_match = re.match(r"^(.+?)\s+-\s+(.+)$", stem)
-    compact_dash_match = re.match(r"^(.+?)-\s*(.+)$", stem)
+    # 贪婪匹配：没有 ` - ` 时从最后一个 `-` 断开，避免把歌手里的 `-MSR` 这类后缀切给歌名
+    compact_dash_match = re.match(r"^(.+)\s*-\s*(.+)$", stem)
     if dash_match:
         artist = dash_match.group(1).strip()
         title = dash_match.group(2).strip()
@@ -144,7 +146,9 @@ def load_lyric_files(lyric_dir: Path) -> list[LyricFile]:
     for path in lyric_dir.glob("*.srt"):
         if not re.search(r"-[01]\.srt$", path.name):
             continue
-        files.append(parse_lyric_file(path))
+        lyric = parse_lyric_file(path)
+        lyric.has_content = has_non_empty_content(path)
+        files.append(lyric)
     return files
 
 
@@ -165,7 +169,7 @@ def title_variants(title: str) -> list[str]:
 
 def artist_tokens(artist: str) -> list[str]:
     tokens = re.split(r"\s*(?:,|，|&| and | _ |/|、)\s*", artist)
-    return [normalize(token) for token in tokens if token.strip()]
+    return [normalize(strip_parenthesized_text(token)) for token in tokens if token.strip()]
 
 
 def has_non_empty_content(path: Path) -> bool:
@@ -185,7 +189,10 @@ def find_best_match(track: Track, lyrics: list[LyricFile], kind: str) -> LyricFi
             continue
         if lyric.normalized_title not in normalized_titles:
             continue
-        if not any(token and token in lyric.normalized_artist for token in tokens):
+        if not any(
+            token and (token in lyric.normalized_artist or lyric.normalized_artist in token)
+            for token in tokens
+        ):
             continue
 
         score = 0
@@ -198,7 +205,13 @@ def find_best_match(track: Track, lyrics: list[LyricFile], kind: str) -> LyricFi
     if not candidates:
         return None
 
-    return sorted(candidates, key=lambda item: (item[0], item[1]))[0][2]
+    # 译文优先取有内容的：得分最高的候选可能是缓存里的空文件，此时退到次优候选
+    for _, _, lyric in sorted(candidates, key=lambda item: (item[0], item[1])):
+        if kind == "1" and not lyric.has_content:
+            continue
+        return lyric
+
+    return None
 
 
 def copy_lyrics(tracks: list[Track], lyrics: list[LyricFile], output_dir: Path, dry_run: bool) -> tuple[list[tuple[Track, str, LyricFile, Path]], list[tuple[Track, str]]]:
@@ -211,10 +224,6 @@ def copy_lyrics(tracks: list[Track], lyrics: list[LyricFile], output_dir: Path, 
         for kind in ("0", "1"):
             match = find_best_match(track, lyrics, kind)
             if not match:
-                missing.append((track, kind))
-                continue
-
-            if kind == "1" and not has_non_empty_content(match.path):
                 missing.append((track, kind))
                 continue
 

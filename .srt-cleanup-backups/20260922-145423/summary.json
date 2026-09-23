@@ -1,0 +1,380 @@
+[
+  {
+    "File": "1.srt",
+    "BeforeHash": "B56C576B97AF494FE523EADCE4FF32D52D46C2695A54FE730E79F1E0EC4BF759",
+    "BeforeCount": 53,
+    "Removed": 6,
+    "Edited": 0,
+    "AfterCount": 47,
+    "Changed": true
+  },
+  {
+    "File": "2.srt",
+    "BeforeHash": "92A3F1FF95E962EC0329EA84BACC3743DE2E6C70C7513192E335956B6DA9F232",
+    "BeforeCount": 4,
+    "Removed": 4,
+    "Edited": 0,
+    "AfterCount": 0,
+    "Changed": true
+  },
+  {
+    "File": "3.srt",
+    "BeforeHash": "2C77EC1DEF8D042E18C3E4E93066278B0D168C4FA1DA77E5CA6CE970EC74F296",
+    "BeforeCount": 66,
+    "Removed": 20,
+    "Edited": 0,
+    "AfterCount": 46,
+    "Changed": true
+  },
+  {
+    "File": "5.srt",
+    "BeforeHash": "2E188C2733AEAD9F4A27F95900EE1989FF00DAA150D2034FA79620B9F4985D44",
+    "BeforeCount": 87,
+    "Removed": 2,
+    "Edited": 0,
+    "AfterCount": 85,
+    "Changed": true
+  },
+  {
+    "File": "7.srt",
+    "BeforeHash": "0221CCB0D00CE4F9AEB04913D7716564134515CCF50703E6BC273D1BC03F0302",
+    "BeforeCount": 55,
+    "Removed": 3,
+    "Edited": 0,
+    "AfterCount": 52,
+    "Changed": true
+  },
+  {
+    "File": "9.srt",
+    "BeforeHash": "44BA9E45F12C02D3E6A9D7EBFDC0B1C1399802B475AD9C36F34C0C2FA4EE9870",
+    "BeforeCount": 102,
+    "Removed": 3,
+    "Edited": 0,
+    "AfterCount": 99,
+    "Changed": true
+  },
+  {
+    "File": "10.srt",
+    "BeforeHash": "C20FEC8823EBD63F0A0727085E98F05091DE41AD41949D41E0048B1AA8C345E4",
+    "BeforeCount": 92,
+    "Removed": 4,
+    "Edited": 0,
+    "AfterCount": 88,
+    "Changed": true
+  },
+  {
+    "File": "11.srt",
+    "BeforeHash": "6EC8273F366951937E450687FEBA81520189A5E9E1996242691363B7ACDBCF85",
+    "BeforeCount": 52,
+    "Removed": 4,
+    "Edited": 0,
+    "AfterCount": 48,
+    "Changed": true
+  },
+  {
+    "File": "12.srt",
+    "BeforeHash": "8E240E03B54EAE208DC0DB2FAA2F2C00BAE149EF2DA254DA94796CBE0F7CC68E",
+    "BeforeCount": 58,
+    "Removed": 4,
+    "Edited": 0,
+    "AfterCount": 54,
+    "Changed": true
+  },
+  {
+    "File": "13.srt",
+    "BeforeHash": "A1E6D88875A5312EE8B934B5D4E9ED789CC309723271B8EFCCA8A6DFF1792060",
+    "BeforeCount": 60,
+    "Removed": 1,
+    "Edited": 0,
+    "AfterCount": 59,
+    "Changed": true
+  },
+  {
+    "File": "14.srt",
+    "BeforeHash": "79B3046CBF581CBF27D6320763F3ABF343AE6886299B4E99F15ED590B55084FD",
+    "BeforeCount": 76,
+    "Removed": 3,
+    "Edited": 0,
+    "AfterCount": 73,
+    "Changed": true
+  },
+  {
+    "File": "15.srt",
+    "BeforeHash": "A0B2C2F7E3D1DE891EB6FC8C09F76FCE33AFBE0EA460E7EBC8B77ED1E014D1A8",
+    "BeforeCount": 3,
+    "Removed": 3,
+    "Edited": 0,
+    "AfterCount": 0,
+    "Changed": true
+  },
+  {
+    "File": "16.srt",
+    "BeforeHash": "F09FDCE826B0550FBD1F38724137D6A5C97C675668A8CA330334BA5B8DFFD5F5",
+    "BeforeCount": 58,
+    "Removed": 4,
+    "Edited": 0,
+    "AfterCount": 54,
+    "Changed": true
+  },
+  {
+    "File": "18.srt",
+    "BeforeHash": "FAA1BF939C08F3DD1B79C522AAA61B33560A9AA68E7E9BA330D5990B1BBA8F4D",
+    "BeforeCount": 37,
+    "Removed": 4,
+    "Edited": 0,
+    "AfterCount": 33,
+    "Changed": true
+  },
+  {
+    "File": "19.srt",
+    "BeforeHash": "065C096605B66FEA96E650C866B1F38B6C2BD2E25D3FDF9B41D218B47ABC8AA3",
+    "BeforeCount": 52,
+    "Removed": 4,
+    "Edited": 0,
+    "AfterCount": 48,
+    "Changed": true
+  },
+  {
+    "File": "20.srt",
+    "BeforeHash": "2C3F9CDF364E666A7209C267E75294E8E46BB9B05D76D46ABB06979208765D5F",
+    "BeforeCount": 41,
+    "Removed": 4,
+    "Edited": 0,
+    "AfterCount": 37,
+    "Changed": true
+  },
+  {
+    "File": "21.srt",
+    "BeforeHash": "DA51F3644B2CACE64E6ABD6667E84B344E1ACB0E2228F147095ECF8A08DF2112",
+    "BeforeCount": 44,
+    "Removed": 8,
+    "Edited": 0,
+    "AfterCount": 36,
+    "Changed": true
+  },
+  {
+    "File": "22.srt",
+    "BeforeHash": "49F74F59795DB2D49FBCE3BCA24C07039B82A5F87B451B05EF73E939452B78B9",
+    "BeforeCount": 44,
+    "Removed": 7,
+    "Edited": 0,
+    "AfterCount": 37,
+    "Changed": true
+  },
+  {
+    "File": "23.srt",
+    "BeforeHash": "2B66395F9C4CD6C6ED9FC585EFAEEDA80F2C07AC8AEC816ADD7106E1702822C7",
+    "BeforeCount": 56,
+    "Removed": 11,
+    "Edited": 0,
+    "AfterCount": 45,
+    "Changed": true
+  },
+  {
+    "File": "24.srt",
+    "BeforeHash": "66DDF0891FC03BA65E0974AA2ADC8092528AC7BAB5ECC8759FC091FFDB4B6EF9",
+    "BeforeCount": 35,
+    "Removed": 3,
+    "Edited": 0,
+    "AfterCount": 32,
+    "Changed": true
+  },
+  {
+    "File": "25.srt",
+    "BeforeHash": "810D9B14D8FD69A09EC6375AB29DBB70640CD65228F296EE149BB5123AB3D505",
+    "BeforeCount": 64,
+    "Removed": 5,
+    "Edited": 0,
+    "AfterCount": 59,
+    "Changed": true
+  },
+  {
+    "File": "26.srt",
+    "BeforeHash": "A9ED1EAF9D0CC952AB8A99EE6895615D17D3C1AB155B3BD8F4D02D23D171B343",
+    "BeforeCount": 78,
+    "Removed": 28,
+    "Edited": 0,
+    "AfterCount": 50,
+    "Changed": true
+  },
+  {
+    "File": "28.srt",
+    "BeforeHash": "0922C3520155183ED03CF3AEF3D8DFCC60CCF13B7C9EC4DF7F462985BC37CF7C",
+    "BeforeCount": 28,
+    "Removed": 0,
+    "Edited": 0,
+    "AfterCount": 28,
+    "Changed": false
+  },
+  {
+    "File": "29.srt",
+    "BeforeHash": "EA24666D89F0D652541332E1DC230B1C00C6E3AF2BE7F138B65FB0070BF91401",
+    "BeforeCount": 49,
+    "Removed": 5,
+    "Edited": 0,
+    "AfterCount": 44,
+    "Changed": true
+  },
+  {
+    "File": "32.srt",
+    "BeforeHash": "8790D64996DD3C297108EE58BDE75E986394515828007AA03FF4D5396BE2271A",
+    "BeforeCount": 46,
+    "Removed": 6,
+    "Edited": 0,
+    "AfterCount": 40,
+    "Changed": true
+  },
+  {
+    "File": "33.srt",
+    "BeforeHash": "A530C8D8E8150CBA093922B04E9007F450EC9A6B2368E4AF8707B3FE92E827F5",
+    "BeforeCount": 70,
+    "Removed": 13,
+    "Edited": 0,
+    "AfterCount": 57,
+    "Changed": true
+  },
+  {
+    "File": "34.srt",
+    "BeforeHash": "B2B9AB4AF1100C29F17601638E059B7F103BC6209B6CD019D596B801EF234FBE",
+    "BeforeCount": 63,
+    "Removed": 6,
+    "Edited": 0,
+    "AfterCount": 57,
+    "Changed": true
+  },
+  {
+    "File": "35.srt",
+    "BeforeHash": "3226373AA6B20BEFAF8C52651F446E365B18F16534C38D4DFC667573C5E10F9A",
+    "BeforeCount": 21,
+    "Removed": 3,
+    "Edited": 0,
+    "AfterCount": 18,
+    "Changed": true
+  },
+  {
+    "File": "38.srt",
+    "BeforeHash": "7F92B4D9163225D9CC9D918D2B8309574CFAB8BFD467AEAA2A246B59AB502460",
+    "BeforeCount": 9,
+    "Removed": 3,
+    "Edited": 0,
+    "AfterCount": 6,
+    "Changed": true
+  },
+  {
+    "File": "41.srt",
+    "BeforeHash": "EFD0B2713A9D0F702D8725B914AB87D0A9F2D3869DF9A045DB91938525B2BC1D",
+    "BeforeCount": 65,
+    "Removed": 15,
+    "Edited": 0,
+    "AfterCount": 50,
+    "Changed": true
+  },
+  {
+    "File": "42.srt",
+    "BeforeHash": "1510EE9B2148576920DABE577D7CD0D4BF5B5D1840F03F681DED348AAF7F3B7A",
+    "BeforeCount": 27,
+    "Removed": 3,
+    "Edited": 0,
+    "AfterCount": 24,
+    "Changed": true
+  },
+  {
+    "File": "43.srt",
+    "BeforeHash": "DC5EFCE74E1993DD2D69789652F1963B76562B4949577FB367716BBB3B1F9DFA",
+    "BeforeCount": 22,
+    "Removed": 0,
+    "Edited": 11,
+    "AfterCount": 22,
+    "Changed": true
+  },
+  {
+    "File": "44.srt",
+    "BeforeHash": "1F494BF71644D919A5B7D0D570ADD3E2BEE7F9E05F22961C5427D65B8F408F2F",
+    "BeforeCount": 43,
+    "Removed": 3,
+    "Edited": 0,
+    "AfterCount": 40,
+    "Changed": true
+  },
+  {
+    "File": "45.srt",
+    "BeforeHash": "662185ABF46385AA8384F9BA4DB6DEF21E8A473E0118A88E0EFF3A7A0EC83409",
+    "BeforeCount": 40,
+    "Removed": 3,
+    "Edited": 0,
+    "AfterCount": 37,
+    "Changed": true
+  },
+  {
+    "File": "46.srt",
+    "BeforeHash": "DE92FBB0F4D49463A7F08EABFDB4F257393FADDA7832F241D18A007BAB1E0271",
+    "BeforeCount": 54,
+    "Removed": 3,
+    "Edited": 0,
+    "AfterCount": 51,
+    "Changed": true
+  },
+  {
+    "File": "47.srt",
+    "BeforeHash": "513F7A93BB4A0074F078B6AADDA33FC4A99E339122BF275840B667A08B47FCDD",
+    "BeforeCount": 67,
+    "Removed": 1,
+    "Edited": 0,
+    "AfterCount": 66,
+    "Changed": true
+  },
+  {
+    "File": "48.srt",
+    "BeforeHash": "4C4AA3ECE2EB20EF4935267C7F12B3AD3ACD3EBC5706B83C1AE5AC4E0B02758E",
+    "BeforeCount": 28,
+    "Removed": 3,
+    "Edited": 0,
+    "AfterCount": 25,
+    "Changed": true
+  },
+  {
+    "File": "49.srt",
+    "BeforeHash": "D1E6ED931F4043DEABFED41FEF519AF305B5F0A6F6AA3E3A81D53E4B69F17426",
+    "BeforeCount": 44,
+    "Removed": 4,
+    "Edited": 1,
+    "AfterCount": 40,
+    "Changed": true
+  },
+  {
+    "File": "51.srt",
+    "BeforeHash": "B5AB6377C052593FA0AECB8D41827A0FD5076BC6F7446A9A16E4740EF45BD171",
+    "BeforeCount": 59,
+    "Removed": 4,
+    "Edited": 0,
+    "AfterCount": 55,
+    "Changed": true
+  },
+  {
+    "File": "52.srt",
+    "BeforeHash": "91B5404180EA2B2F07FA0AF1377201DDB4BF6658C59707BC95EBEBB90473131A",
+    "BeforeCount": 83,
+    "Removed": 1,
+    "Edited": 0,
+    "AfterCount": 82,
+    "Changed": true
+  },
+  {
+    "File": "53.srt",
+    "BeforeHash": "E4AFA7AD6747752E838AB83782C5238F44B4BC6DE344F43A8A281EC8FD3F15A9",
+    "BeforeCount": 101,
+    "Removed": 3,
+    "Edited": 0,
+    "AfterCount": 98,
+    "Changed": true
+  },
+  {
+    "File": "54.srt",
+    "BeforeHash": "467CA4A151AD1F984F810CE733A171CDB11E1BBD499F4F7F9FDDF3D4F5309C94",
+    "BeforeCount": 38,
+    "Removed": 2,
+    "Edited": 0,
+    "AfterCount": 36,
+    "Changed": true
+  }
+]

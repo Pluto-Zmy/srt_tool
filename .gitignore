@@ -3,3 +3,10 @@
 *.txt
 *.qrc
 *.log
+.venv-align/
+.models/
+aligned_srts*/
+alignment_check*/
+.pytest_cache/
+.test-tmp/
+!requirements-align.txt

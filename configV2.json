@@ -6,115 +6,231 @@
         },
         {
             "file_name": "2.srt",
-            "time_offset": "154.166666666667"
+            "time_offset": "213.15"
         },
         {
             "file_name": "3.srt",
-            "time_offset": "333.633333333333"
+            "time_offset": "647.266666666667"
         },
         {
             "file_name": "4.srt",
-            "time_offset": "554.883333333333"
+            "time_offset": "887.15"
         },
         {
             "file_name": "5.srt",
-            "time_offset": "771.433333333333"
+            "time_offset": "1038.25"
         },
         {
             "file_name": "6.srt",
-            "time_offset": "1017.85"
+            "time_offset": "1233.98333333333"
         },
         {
             "file_name": "7.srt",
-            "time_offset": "1217.86666666667"
+            "time_offset": "1355.88333333333"
         },
         {
             "file_name": "8.srt",
-            "time_offset": "1398.85"
+            "time_offset": "1594.85"
         },
         {
             "file_name": "9.srt",
-            "time_offset": "1597.3"
+            "time_offset": "1758.8"
         },
         {
             "file_name": "10.srt",
-            "time_offset": "1753.11666666667"
+            "time_offset": "1969.85"
         },
         {
             "file_name": "11.srt",
-            "time_offset": "1963.16666666667"
+            "time_offset": "2203.86666666667"
         },
         {
             "file_name": "12.srt",
-            "time_offset": "2191.15"
+            "time_offset": "2403.03333333333"
         },
         {
             "file_name": "13.srt",
-            "time_offset": "2443.91666666667"
+            "time_offset": "2676.68333333333"
         },
         {
             "file_name": "14.srt",
-            "time_offset": "2655.93333333333"
+            "time_offset": "3013.93333333333"
         },
         {
             "file_name": "15.srt",
-            "time_offset": "2808.3"
+            "time_offset": "3230.08333333333"
         },
         {
             "file_name": "16.srt",
-            "time_offset": "3068.88333333333"
+            "time_offset": "3447.85"
         },
         {
             "file_name": "17.srt",
-            "time_offset": "3330.28333333333"
+            "time_offset": "3696.35"
         },
         {
             "file_name": "18.srt",
-            "time_offset": "3597.98333333333"
+            "time_offset": "3854.38333333333"
         },
         {
             "file_name": "19.srt",
-            "time_offset": "3820.96666666667"
+            "time_offset": "4014.45"
         },
         {
             "file_name": "20.srt",
-            "time_offset": "4100.98333333333"
+            "time_offset": "4252.11666666667"
         },
         {
             "file_name": "21.srt",
-            "time_offset": "4294.48333333333"
+            "time_offset": "4429.08333333333"
         },
         {
             "file_name": "22.srt",
-            "time_offset": "4504.95"
+            "time_offset": "4605.4"
         },
         {
             "file_name": "23.srt",
-            "time_offset": "4804.85"
+            "time_offset": "4756.86666666667"
         },
         {
             "file_name": "24.srt",
-            "time_offset": "5010.2"
+            "time_offset": "4973.76666666667"
         },
         {
             "file_name": "25.srt",
-            "time_offset": "5201.75"
+            "time_offset": "5206.85"
         },
         {
             "file_name": "26.srt",
-            "time_offset": "5417.23333333333"
+            "time_offset": "5474.1"
         },
         {
             "file_name": "27.srt",
-            "time_offset": "5662.46666666667"
+            "time_offset": "5717.2"
         },
         {
             "file_name": "28.srt",
-            "time_offset": "5878.8"
+            "time_offset": "5868.55"
         },
         {
             "file_name": "29.srt",
-            "time_offset": "6117.13333333333"
+            "time_offset": "6071.3"
+        },
+        {
+            "file_name": "30.srt",
+            "time_offset": "6293.65"
+        },
+        {
+            "file_name": "31.srt",
+            "time_offset": "6516.65"
+        },
+        {
+            "file_name": "32.srt",
+            "time_offset": "6688.23333333333"
+        },
+        {
+            "file_name": "33.srt",
+            "time_offset": "6913.03333333333"
+        },
+        {
+            "file_name": "34.srt",
+            "time_offset": "7111.48333333333"
+        },
+        {
+            "file_name": "35.srt",
+            "time_offset": "7338.95"
+        },
+        {
+            "file_name": "36.srt",
+            "time_offset": "7573.5"
+        },
+        {
+            "file_name": "37.srt",
+            "time_offset": "7755.5"
+        },
+        {
+            "file_name": "38.srt",
+            "time_offset": "7984.18333333333"
+        },
+        {
+            "file_name": "39.srt",
+            "time_offset": "8247.01666666667"
+        },
+        {
+            "file_name": "40.srt",
+            "time_offset": "8470.33333333333"
+        },
+        {
+            "file_name": "41.srt",
+            "time_offset": "8660.68333333333"
+        },
+        {
+            "file_name": "42.srt",
+            "time_offset": "8867.18333333333"
+        },
+        {
+            "file_name": "43.srt",
+            "time_offset": "9107.13333333333"
+        },
+        {
+            "file_name": "44.srt",
+            "time_offset": "9300.61666666667"
+        },
+        {
+            "file_name": "45.srt",
+            "time_offset": "9526.88333333333"
+        },
+        {
+            "file_name": "46.srt",
+            "time_offset": "9733.73333333333"
+        },
+        {
+            "file_name": "47.srt",
+            "time_offset": "9978.41666666667"
+        },
+        {
+            "file_name": "48.srt",
+            "time_offset": "10217.9333333333"
+        },
+        {
+            "file_name": "49.srt",
+            "time_offset": "10521.4833333333"
+        },
+        {
+            "file_name": "50.srt",
+            "time_offset": "10746.4"
+        },
+        {
+            "file_name": "51.srt",
+            "time_offset": "11052.85"
+        },
+        {
+            "file_name": "52.srt",
+            "time_offset": "11246.4166666667"
+        },
+        {
+            "file_name": "53.srt",
+            "time_offset": "11549.2833333333"
+        },
+        {
+            "file_name": "54.srt",
+            "time_offset": "11861.7333333333"
+        },
+        {
+            "file_name": "55.srt",
+            "time_offset": "12118.3333333333"
+        },
+        {
+            "file_name": "56.srt",
+            "time_offset": "12295.2666666667"
+        },
+        {
+            "file_name": "57.srt",
+            "time_offset": "12445.1"
+        },
+        {
+            "file_name": "58.srt",
+            "time_offset": "12770.6666666667"
         }
     ]
 }

@@ -1,0 +1,5 @@
+# Optional; the original SRT merge commands still use the standard library only.
+stable-ts==2.19.1
+# Tested pair; CUDA wheels with the same versions can be installed first.
+torch==2.5.1
+torchaudio==2.5.1
